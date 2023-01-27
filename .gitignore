@@ -1,0 +1,9 @@
+/build
+/node_modules
+/jwt-keys
+.DS_Store
+.idea
+.coverage
+.nyc_output
+.eslint-results.json
+src/config/config.ts
