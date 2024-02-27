@@ -8,5 +8,6 @@ export interface IConfig {
     database: string;
     databaseUser: string;
     databasePassword: string;
+    databaseSSL: boolean;
     jwtValidityInSeconds: number;
 }

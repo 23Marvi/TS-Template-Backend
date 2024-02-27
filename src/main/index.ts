@@ -25,6 +25,7 @@ async function startServer(): Promise<void> {
         await sequelizeDb.sync();
         server.listen(port, "0.0.0.0", () => {
             console.log(`${applicationTitle} - Running on port: ${port}`);
+            console.log(`Swagger can be found at: http://localhost:${port}/documentation/`)
         });
     } catch (error) {
         console.error(error);

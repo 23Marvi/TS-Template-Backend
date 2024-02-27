@@ -7,6 +7,6 @@ describe("Status V1", () => {
         const res = await superagent.get(
             `http://127.0.0.1:${config.port}/v1/status`
         );
-        chai.expect(res.status).to.eql(200);
+        chai.expect(res.status).equal(200);
     });
 });

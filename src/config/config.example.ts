@@ -1,9 +1,9 @@
-import { IConfig } from "../interfaces/config/config.interface";
+import { IConfig } from "../interfaces/config.interface";
 
 export const config: IConfig = {
     // General
     port: process.env.PORT ? parseInt(process.env.PORT) : 4030,
-    applicationName: process.env.APPLICATION || "Epic application",
+    applicationName: process.env.APPLICATION || "ts-backend-template",
     privateJwtKey: process.env.PRIVATE_JWT_KEY || "./jwt-keys/private.pem",
     publicJwtKey: process.env.PUBLIC_JWT_KEY || "./jwt-keys/public.pem",
 
@@ -13,6 +13,7 @@ export const config: IConfig = {
     database: process.env.DATABASE || "DB_NAME",
     databaseUser: process.env.DATABASE_USER || "DB_USER",
     databasePassword: process.env.DATABASE_PASSWORD || "DB_PASSWORD",
+    databaseSSL: process.env.DATABASE_SSL === "true" || false,
 
     // Auth
     jwtValidityInSeconds: process.env.JWT_VALIDITY ? parseInt(process.env.JWT_VALIDITY, 10) : 86400
